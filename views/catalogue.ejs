@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>IT Academy</h1>
+    <h2>Formations disponibles</h2>
+    <button class="button" onclick="window.location='/panier'">Voir le panier</button>
+    <button class="button" onclick="window.location='/pseudo'">Se connecter</button>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Prix</th>
+            <th>Debut</th>
+            <th>Fin</th>
+            <th></th>
+        </tr>
+        <% for(let i = 0; i < todot.length; i++) { %>
+            <tr>
+                <th><%= todot[i].idpanier %></th>
+                <th><%= todot[i].Nom %></th>
+                <th><%= todot[i].Prix %></th>
+                <th><%= todot[i].Debut %></th>
+                <th><%= todot[i].Fin %></th>
+                <th><button id="inscription" onclick="window.location='/ajout/<%= todot[i].idpanier %>'">S'inscrire</button></th>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>
